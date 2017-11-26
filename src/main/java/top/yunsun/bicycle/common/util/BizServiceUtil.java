@@ -1,5 +1,7 @@
-package top.yunsun.bicycle.common;
+package top.yunsun.bicycle.common.util;
 
+
+import top.yunsun.bicycle.common.UUIDIPGenerator;
 
 public class BizServiceUtil extends UUIDIPGenerator {
 
