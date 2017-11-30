@@ -40,7 +40,7 @@ public class BandaSpringMvcConfig extends WebMvcConfigurerAdapter {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
         //viewResolver.setPrefix("/WEB-INF/classes/views/");
         viewResolver.setPrefix("classpath:/templates/");
-        //viewResolver.setSuffix(".html");
+        viewResolver.setSuffix(".ftl");
         viewResolver.setViewClass(JstlView.class);
         return viewResolver;
     }
