@@ -32,7 +32,9 @@ public class BandaSpringMvcConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         //super.addInterceptors(registry);
-        registry.addInterceptor(bandaInterceptor());
+        InterceptorRegistration ir = registry.addInterceptor(bandaInterceptor());
+        //定义拦截的路径
+        ir.addPathPatterns("/banda/**");
     }
 
     @Override

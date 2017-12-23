@@ -4,9 +4,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+import top.yunsun.bicycle.common.config.ConstantConfig;
+import top.yunsun.bicycle.controller.result.UserInfo;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class BandaInterceptor extends HandlerInterceptorAdapter {
 
@@ -26,6 +29,12 @@ public class BandaInterceptor extends HandlerInterceptorAdapter {
         //return super.preHandle(request, response, handler);
         long startTime = System.currentTimeMillis();
         request.setAttribute("startTime", startTime);
+        HttpSession session = request.getSession();
+        UserInfo userInfo = (UserInfo) session.getAttribute(ConstantConfig.USER_LOGIN_SESSION);
+        if (userInfo == null) {
+            response.sendRedirect("/banda/index.html");
+            return false;
+        }
         return true;
     }
 

@@ -1,8 +1,9 @@
 package top.yunsun.bicycle.controller.result;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class UserInfo {
+public class UserInfo implements Serializable {
 
     private String name;
     private String sex;
