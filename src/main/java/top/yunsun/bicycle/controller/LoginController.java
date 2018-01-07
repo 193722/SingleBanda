@@ -31,15 +31,21 @@ public class LoginController {
     private RedisUtils redisUtils;
 
     @RequestMapping("/index.html")
-    public ModelAndView login(ModelMap modelMap) {
+    public ModelAndView login(ModelMap modelMap, HttpSession session) {
         logger.info("跳转首页");
         List<UserInfo> list = new ArrayList<>();
+        UserInfo userInfo = new UserInfo();
+        userInfo.setName("张三");
+        userInfo.setSex("男");
+        userInfo.setCreateTime(new Date());
+        session.setAttribute(ConstantConfig.USER_LOGIN_SESSION, userInfo);
+        list.add(userInfo);
         for (int i = 0; i <= 2; i++) {
-            UserInfo userInfo = new UserInfo();
-            userInfo.setName("admin_" + i);
-            userInfo.setSex("男");
-            userInfo.setCreateTime(new Date());
-            list.add(userInfo);
+            UserInfo user = new UserInfo();
+            user.setName("admin_" + i);
+            user.setSex("男");
+            user.setCreateTime(new Date());
+            list.add(user);
         }
         modelMap.put("userList", list);
         modelMap.put("system", "admin:超级管理员");
@@ -49,12 +55,8 @@ public class LoginController {
     @RequestMapping("/list.json")
     public UserInfo list(ModelMap modelMap, HttpSession session) {
         logger.info("跳转集合页面");
-        UserInfo userInfo = new UserInfo();
-        userInfo.setName("张三");
-        userInfo.setSex("男");
-        userInfo.setCreateTime(new Date());
-        session.setAttribute(ConstantConfig.USER_LOGIN_SESSION, userInfo);
-        return userInfo;
+        UserInfo user = (UserInfo) session.getAttribute(ConstantConfig.USER_LOGIN_SESSION);
+        return user;
     }
 
     @RequestMapping("/result.html")
