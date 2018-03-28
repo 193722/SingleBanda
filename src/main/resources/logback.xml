@@ -11,7 +11,7 @@
     <!-- <property name="log_dir" value="C:/test" />-->
     <property name="log_dir" value="./logs/"/>
     <!-- 日志最大的历史 5天 -->
-    <property name="maxHistory" value="5"/>
+    <property name="maxHistory" value="30"/>
 
     <!-- ConsoleAppender 控制台输出日志 -->
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
