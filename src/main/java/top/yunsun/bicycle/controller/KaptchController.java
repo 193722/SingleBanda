@@ -14,7 +14,7 @@ import java.io.ByteArrayOutputStream;
 
 @RestController
 @RequestMapping("/kaptcha")
-public class KaptchController {
+public class KaptchController extends BaseController {
 
     @RequestMapping("/getKaptcha.html")
     public void kaptcha(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
