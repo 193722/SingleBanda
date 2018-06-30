@@ -11,8 +11,8 @@
     <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
         <property name="javaFileEncoding" value="UTF-8"/>
 
-        <plugin type="top.yunsun.bicycle.core.generator.helper.BicycleMapperPlugin">
-            <property name="mappers" value="top.yunsun.bicycle.core.ground.mapper.DynamicPageableQueryMapper"/>
+        <plugin type="clud.qc.bicycle.core.generator.helper.BicycleMapperPlugin">
+            <property name="mappers" value="clud.qc.bicycle.core.ground.mapper.DynamicPageableQueryMapper"/>
         </plugin>
 
         <!--生成实体对应的数据库连接-->
@@ -20,11 +20,11 @@
                         connectionURL="jdbc:mysql://localhost:3306/banda?useSSL=false" userId="root"
                         password="123456">
         </jdbcConnection>
-        <javaTypeResolver type="top.yunsun.bicycle.core.generator.helper.JavaTypeResolverImpl"/>
+        <javaTypeResolver type="clud.qc.bicycle.core.generator.helper.JavaTypeResolverImpl"/>
         <!--实体,必选-->
         <javaModelGenerator targetPackage="top.yunsun.bicycle.entity.{0}"
                             targetProject="src/main/java">
-            <property name="rootClass" value="top.yunsun.bicycle.core.ground.entity.BaseDO"/>
+            <property name="rootClass" value="clud.qc.bicycle.core.ground.entity.BaseDO"/>
         </javaModelGenerator>
 
         <!--xml文件,mapper接口 不需要生成时  可以注释掉-->
