@@ -64,7 +64,7 @@ public class FileUploadHandler {
             //3、判断提交上来的数据是否是上传表单的数据
             if (!fileUpload.isMultipartContent(request)) {
                 //按照传统方式获取数据
-                return;
+                return null;
             }
             //设置上传单个文件的大小的最大值,单位是 KB
             fileUpload.setFileSizeMax(fileMaxSize);
@@ -135,6 +135,7 @@ public class FileUploadHandler {
         } catch (Exception e) {
             logger.error("上传文件异常：{}", e);
         }
+        return null;
     }
 
     /**

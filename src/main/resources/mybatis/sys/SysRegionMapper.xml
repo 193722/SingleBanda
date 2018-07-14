@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="clud.qc.bicycle.mapper.sys.SysRegionMapper">
+  <resultMap id="BaseResultMap" type="clud.qc.bicycle.entity.sys.SysRegionDO">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="region_id" jdbcType="VARCHAR" property="regionId" />
+    <result column="parent_id" jdbcType="VARCHAR" property="parentId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="merger_name" jdbcType="VARCHAR" property="mergerName" />
+    <result column="short_name" jdbcType="VARCHAR" property="shortName" />
+    <result column="merger_short_name" jdbcType="VARCHAR" property="mergerShortName" />
+    <result column="level_type" jdbcType="VARCHAR" property="levelType" />
+    <result column="city_code" jdbcType="VARCHAR" property="cityCode" />
+    <result column="zip_code" jdbcType="VARCHAR" property="zipCode" />
+    <result column="pinyin" jdbcType="VARCHAR" property="pinyin" />
+    <result column="jianpin" jdbcType="VARCHAR" property="jianpin" />
+    <result column="first_char" jdbcType="CHAR" property="firstChar" />
+    <result column="lng" jdbcType="VARCHAR" property="lng" />
+    <result column="lat" jdbcType="VARCHAR" property="lat" />
+    <result column="remarks" jdbcType="VARCHAR" property="remarks" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    region_id, parent_id, name, merger_name, short_name, merger_short_name, level_type, 
+    city_code, zip_code, pinyin, jianpin, first_char, lng, lat, remarks
+  </sql>
+</mapper>
