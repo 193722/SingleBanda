@@ -1,5 +1,6 @@
-package clud.qc.bicycle.controller;
+package clud.qc.bicycle.controller.sys;
 
+import clud.qc.bicycle.controller.BaseController;
 import com.google.code.kaptcha.impl.DefaultKaptcha;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

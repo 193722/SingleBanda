@@ -1,6 +1,7 @@
 package clud.qc.bicycle.entity.sys;
 
 import clud.qc.bicycle.core.ground.entity.BaseDO;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -83,7 +84,7 @@ public class SysRegionDO extends BaseDO {
      * 首字母
      */
     @Column(name = "first_char")
-    private Boolean firstChar;
+    private String firstChar;
 
     /**
      * 经度
@@ -306,7 +307,7 @@ public class SysRegionDO extends BaseDO {
      *
      * @return first_char - 首字母
      */
-    public Boolean getFirstChar() {
+    public String getFirstChar() {
         return firstChar;
     }
 
@@ -315,7 +316,7 @@ public class SysRegionDO extends BaseDO {
      *
      * @param firstChar 首字母
      */
-    public void setFirstChar(Boolean firstChar) {
+    public void setFirstChar(String firstChar) {
         this.firstChar = firstChar;
     }
 
