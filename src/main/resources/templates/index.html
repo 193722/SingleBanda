@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>layui 搭建项目</title>
-    <link rel="stylesheet" href="/static/layui/css/layui.css">
+    <link rel="stylesheet" href="static/layui/css/layui.css">
 </head>
 <body>
 
@@ -17,13 +17,31 @@
         <h3>创建时间：${user.createTime?string('YYYY-MM-dd HH:mm:ss')}</h3>
     </#list>
 </#if>-->
-
-<script src="/static/layui/layui.js"></script>
+导入exls：<input id="importFile" type="file" value=""/>
+<button id="button">导入</button>
+<script src="static/layui/layui.js"></script>
 <script>
     //一般直接写在一个js文件中
     layui.use(['layer', 'form'], function () {
         var layer = layui.layer, form = layui.form;
-        layer.msg('Hello World');
+        $("#button").on("click", function () {
+            layer.msg("点击按钮有效");
+            $.ajax({
+                url: '/singleBanda/excel/import',
+                method: 'post',
+                data: {"filePath": "filePath"},
+                dataType: 'JSON',
+                success: function (res) {
+                    if (res.code = '0') {
+                        parent.closeIframe(res.msg);
+                    }
+                    else
+                        alert(res.msg);
+                },
+                error: function (data) {
+                }
+            });
+        });
     });
 </script>
 </body>

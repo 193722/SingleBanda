@@ -16,6 +16,6 @@ public class BandaApplication {
         // 错误码检查
         ErrorCodeEnum.selfCheck();
         SpringApplication.run(BandaApplication.class, args);
-        logger.info("项目管理后台访问路径：http://localhost:8000/singleBanda/index.html");
+        logger.info("项目管理后台访问路径：http://localhost:8088/singleBanda/index.html");
     }
 }

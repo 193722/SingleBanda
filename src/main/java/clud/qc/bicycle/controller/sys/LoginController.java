@@ -17,40 +17,39 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-
 @RestController
 public class LoginController extends BaseController {
-
-    private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
-
-    @Autowired
-    private RedisUtils redisUtils;
-
-    @RequestMapping("/index.html")
-    public ModelAndView login(ModelMap modelMap, HttpSession session) {
-        logger.info("跳转首页");
-        List<UserInfo> list = new ArrayList<>();
-        UserInfo userInfo = new UserInfo();
-        userInfo.setName("张三");
-        userInfo.setSex("男");
-        userInfo.setCreateTime(new Date());
-        session.setAttribute(ConstantConfig.USER_LOGIN_SESSION, userInfo);
-        list.add(userInfo);
-        modelMap.put("userList", list);
-        modelMap.put("system", "admin:超级管理员");
-        return new ModelAndView("index");
-    }
-
-    @RequestMapping("/list.json")
-    public UserInfo list(ModelMap modelMap, HttpSession session) {
-        logger.info("跳转集合页面");
-        UserInfo user = (UserInfo) session.getAttribute(ConstantConfig.USER_LOGIN_SESSION);
-        return user;
-    }
-
-    @RequestMapping("/result.html")
-    public ModelAndView result(ModelMap modelMap) {
-        return new ModelAndView("404");
-    }
-
+	
+	private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
+	
+	@Autowired
+	private RedisUtils redisUtils;
+	
+	@RequestMapping("/index.html")
+	public ModelAndView login(ModelMap modelMap, HttpSession session) {
+		logger.info("跳转首页");
+		List<UserInfo> list = new ArrayList<>();
+		UserInfo userInfo = new UserInfo();
+		userInfo.setName("张三");
+		userInfo.setSex("男");
+		userInfo.setCreateTime(new Date());
+		session.setAttribute(ConstantConfig.USER_LOGIN_SESSION, userInfo);
+		list.add(userInfo);
+		modelMap.put("userList", list);
+		modelMap.put("system", "admin:超级管理员");
+		return new ModelAndView("index");
+	}
+	
+	@RequestMapping("/list.json")
+	public UserInfo list(ModelMap modelMap, HttpSession session) {
+		logger.info("跳转集合页面");
+		UserInfo user = (UserInfo) session.getAttribute(ConstantConfig.USER_LOGIN_SESSION);
+		return user;
+	}
+	
+	@RequestMapping("/result.html")
+	public ModelAndView result(ModelMap modelMap) {
+		return new ModelAndView("404");
+	}
+	
 }
