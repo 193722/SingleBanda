@@ -98,3 +98,23 @@ CREATE TABLE `user_portrait` (
 -- ----------------------------
 -- Records of user_portrait
 -- ----------------------------
+
+
+CREATE TABLE `sys_region` (
+  `region_id` varchar(6) NOT NULL COMMENT '区域编码',
+  `parent_id` varchar(6) NOT NULL COMMENT '父地域编码',
+  `name` varchar(64) NOT NULL COMMENT '地域名称',
+  `merger_name` varchar(128) NOT NULL COMMENT '地域组合名称',
+  `short_name` varchar(64) NOT NULL COMMENT '简称',
+  `merger_short_name` varchar(128) NOT NULL COMMENT '地域组合简称',
+  `level_type` varchar(2) NOT NULL COMMENT '地域等级',
+  `city_code` varchar(6) DEFAULT NULL COMMENT '城市编码',
+  `zip_code` varchar(6) DEFAULT NULL COMMENT '邮编',
+  `pinyin` varchar(32) DEFAULT NULL COMMENT '拼音',
+  `jianpin` varchar(16) DEFAULT NULL COMMENT '简拼',
+  `first_char` char(1) NOT NULL COMMENT '首字母',
+  `lng` varchar(32) DEFAULT NULL COMMENT '经度',
+  `lat` varchar(32) DEFAULT NULL COMMENT '纬度',
+  `remarks` varchar(128) DEFAULT NULL COMMENT '备注',
+  PRIMARY KEY (`region_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='中国地域信息';

@@ -16,7 +16,6 @@ public class SysRegionDO extends BaseDO {
      * 区域编码
      */
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "region_id")
     private String regionId;
 
