@@ -17,23 +17,30 @@
         <h3>创建时间：${user.createTime?string('YYYY-MM-dd HH:mm:ss')}</h3>
     </#list>
 </#if>-->
-导入exls：<input id="importFile" type="file" value=""/>
-<button id="button">导入</button>
+<form id="formId" enctype="multipart/form-data">
+    导入exls：<input id="fileName" name="fileName" type="file" value=""/>
+    <button id="button">导入</button>
+</form>
 <script src="static/layui/layui.js"></script>
 <script>
     //一般直接写在一个js文件中
-    layui.use(['layer', 'form'], function () {
-        var layer = layui.layer, form = layui.form;
+    layui.use(['layer', 'form', 'jquery'], function () {
+        var layer = layui.layer,
+            form = layui.form,
+            $ = layui.jquery;
         $("#button").on("click", function () {
-            layer.msg("点击按钮有效");
+            var form = new FormData($("#formId")[0]);
+            console.log(form);
             $.ajax({
                 url: '/singleBanda/excel/import',
-                method: 'post',
-                data: {"filePath": "filePath"},
+                method: 'POST',
+                data: form,
                 dataType: 'JSON',
+                contentType: false,
+                processData: false,
                 success: function (res) {
                     if (res.code = '0') {
-                        parent.closeIframe(res.msg);
+                        layer.alert(res.msg);
                     }
                     else
                         alert(res.msg);

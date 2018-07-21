@@ -10,4 +10,6 @@ public interface SysRegionService {
 
     void batchSave(List<SysRegionDO> sysRegionDOList);
 
+    List<SysRegionDO> queryAll();
+
 }
