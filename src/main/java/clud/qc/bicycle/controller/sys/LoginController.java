@@ -40,6 +40,12 @@ public class LoginController extends BaseController {
 		return new ModelAndView("index");
 	}
 	
+	@RequestMapping("/welcome.html")
+	public ModelAndView welcome(ModelMap modelMap, HttpSession session) {
+		logger.info("跳转首页");
+		return new ModelAndView("welcome");
+	}
+	
 	@RequestMapping("/list.json")
 	public UserInfo list(ModelMap modelMap, HttpSession session) {
 		logger.info("跳转集合页面");
