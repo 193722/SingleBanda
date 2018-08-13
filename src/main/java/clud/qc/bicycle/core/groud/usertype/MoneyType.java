@@ -7,7 +7,7 @@
  * 修订记录:
  * zisi@yiji.com:2017-05-22 10:59创建
  */
-package clud.qc.bicycle.core.ground.usertype;
+package clud.qc.bicycle.core.groud.usertype;
 
 import org.hibernate.HibernateException;
 import org.hibernate.engine.spi.SessionImplementor;

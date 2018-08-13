@@ -1,13 +1,11 @@
 package clud.qc.bicycle.entity.sys;
 
-import clud.qc.bicycle.core.ground.entity.BaseDO;
+import clud.qc.bicycle.core.groud.entity.BaseDO;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 

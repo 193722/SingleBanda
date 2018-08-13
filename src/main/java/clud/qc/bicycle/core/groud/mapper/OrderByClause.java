@@ -7,7 +7,7 @@
  * 修订记录：
  * woniu@yiji.com 2017年06月08日 13:35:26 创建
  */
-package clud.qc.bicycle.core.ground.mapper;
+package clud.qc.bicycle.core.groud.mapper;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;

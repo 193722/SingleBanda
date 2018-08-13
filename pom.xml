@@ -141,6 +141,26 @@
             </plugin>
         </plugins>
     </build>
-
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <!-- 指定nexus私有服务器的地址 -->
+            <distributionManagement>
+                <repository>
+                    <id>zheye-releases</id>
+                    <name>Internal Release Repository</name>
+                    <url>http://qianchan1024.club:8081/repository/maven-releases/</url>
+                </repository>
+                <snapshotRepository>
+                    <id>zheye-snapshot</id>
+                    <name>Internal snapshot Repository</name>
+                    <url>http://qianchan1024.club:8081/repository/maven-snapshots/</url>
+                </snapshotRepository>
+            </distributionManagement>
+        </profile>
+    </profiles>
 
 </project>

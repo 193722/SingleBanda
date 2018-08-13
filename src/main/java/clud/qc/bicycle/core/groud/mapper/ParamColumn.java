@@ -7,7 +7,7 @@
  * 修订记录：
  * woniu@yiji.com 2017年06月02日 11:19:34 创建
  */
-package clud.qc.bicycle.core.ground.mapper;
+package clud.qc.bicycle.core.groud.mapper;
 
 
 public class ParamColumn {

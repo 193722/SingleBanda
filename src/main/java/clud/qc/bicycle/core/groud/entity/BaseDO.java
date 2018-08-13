@@ -7,9 +7,9 @@
  * 修订记录:
  * zisi@yiji.com:2017-05-22 10:57创建
  */
-package clud.qc.bicycle.core.ground.entity;
+package clud.qc.bicycle.core.groud.entity;
 
-import clud.qc.bicycle.core.ground.usertype.MoneyType;
+import clud.qc.bicycle.core.groud.usertype.MoneyType;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.hibernate.annotations.TypeDef;

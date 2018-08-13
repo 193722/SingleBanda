@@ -1,6 +1,6 @@
 package clud.qc.bicycle.entity.user;
 
-import clud.qc.bicycle.core.ground.entity.BaseDO;
+import clud.qc.bicycle.core.groud.entity.BaseDO;
 
 import java.util.Date;
 import javax.persistence.Column;

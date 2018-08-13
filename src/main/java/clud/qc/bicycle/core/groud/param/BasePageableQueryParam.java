@@ -7,7 +7,7 @@
  * 修订记录:
  * zisi@yiji.com:2017-05-22 11:08创建
  */
-package clud.qc.bicycle.core.ground.param;
+package clud.qc.bicycle.core.groud.param;
 
 
 import java.util.Date;

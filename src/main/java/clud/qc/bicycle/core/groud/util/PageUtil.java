@@ -7,7 +7,7 @@
  * 修订记录:
  * zisi@yiji.com:2017-05-22 11:37创建
  */
-package clud.qc.bicycle.core.ground.util;
+package clud.qc.bicycle.core.groud.util;
 
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
