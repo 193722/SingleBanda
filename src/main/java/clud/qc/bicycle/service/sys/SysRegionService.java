@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface SysRegionService {
 
-    void save(SysRegionDO sysRegionDO);
+    SysRegionDO save(SysRegionDO sysRegionDO);
 
-    void batchSave(List<SysRegionDO> sysRegionDOList);
+    List<SysRegionDO> batchSave(List<SysRegionDO> sysRegionDOList);
 
     List<SysRegionDO> queryAll();
 

@@ -7,9 +7,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import clud.qc.bicycle.common.enums.ErrorCodeEnum;
 import org.springframework.boot.web.servlet.MultipartConfigFactory;
 import org.springframework.context.annotation.Bean;
+import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import javax.servlet.MultipartConfigElement;
 
+
+
+@EnableWebMvc
+@EnableRedisHttpSession
 @SpringBootApplication
 public class BandaApplication {
 	

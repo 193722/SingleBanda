@@ -1,7 +1,6 @@
 package clud.qc.bicycle.common.file;
 
 import clud.qc.bicycle.common.exception.ResultCode;
-import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.apache.tomcat.util.http.fileupload.*;
 import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
@@ -12,6 +11,7 @@ import clud.qc.bicycle.common.constant.ConstantConfig;
 import clud.qc.bicycle.common.constant.SbootConstantConfig;
 import clud.qc.bicycle.common.exception.BusinessException;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;

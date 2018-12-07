@@ -1,23 +1,14 @@
-/*
- * www.yiji.com Inc.
- * Copyright (c) 2014 All Rights Reserved.
- */
-
-/*
- * 修订记录：
- * husheng@yiji.com 2014年9月1日 下午5:37:45创建
- */
 package clud.qc.bicycle.core.money;
+
+import org.hibernate.HibernateException;
+import org.hibernate.engine.spi.SharedSessionContractImplementor;
+import org.hibernate.usertype.UserType;
 
 import java.io.Serializable;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
-
-import org.hibernate.HibernateException;
-import org.hibernate.engine.spi.SessionImplementor;
-import org.hibernate.usertype.UserType;
 
 public class MoneyType implements UserType {
 
@@ -47,27 +38,22 @@ public class MoneyType implements UserType {
     }
 
     @Override
-    public Object nullSafeGet(ResultSet rs, String[] names, SessionImplementor session, Object owner)
-            throws HibernateException,
-            SQLException {
-        Long value = rs.getLong(names[0]);
+    public Object nullSafeGet(ResultSet resultSet, String[] strings, SharedSessionContractImplementor session, Object o) throws HibernateException, SQLException {
+        Long value = resultSet.getLong(strings[0]);
         Money m = new Money();
         m.setCent(value);
         return m;
     }
 
     @Override
-    public void nullSafeSet(PreparedStatement st, Object value, int index,
-                            SessionImplementor session) throws HibernateException, SQLException {
+    public void nullSafeSet(PreparedStatement st, Object value, int index, SharedSessionContractImplementor session) throws HibernateException, SQLException {
         if (value == null) {
             st.setLong(index, 0L);
             return;
         }
-
         if (!(value instanceof Money)) {
             throw new HibernateException("value is not type of " + Money.class);
         }
-
         st.setLong(index, ((Money) value).getCent());
     }
 

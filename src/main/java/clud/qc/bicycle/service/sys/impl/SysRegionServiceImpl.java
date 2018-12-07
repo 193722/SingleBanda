@@ -10,23 +10,23 @@ import java.util.List;
 
 @Service
 public class SysRegionServiceImpl implements SysRegionService {
-	
-	@Autowired
-	private SysRegionDAO sysRegionDAO;
-	
-	@Override
-	public void save(SysRegionDO sysRegionDO) {
-		sysRegionDAO.save(sysRegionDO);
-	}
-	
-	@Override
-	public void batchSave(List<SysRegionDO> sysRegionDOList) {
-		sysRegionDAO.save(sysRegionDOList);
-	}
-	
-	@Override
-	public List<SysRegionDO> queryAll() {
-		return sysRegionDAO.findAll();
-	}
-	
+
+    @Autowired
+    private SysRegionDAO sysRegionDAO;
+
+    @Override
+    public SysRegionDO save(SysRegionDO sysRegionDO) {
+        return sysRegionDAO.save(sysRegionDO);
+    }
+
+    @Override
+    public List<SysRegionDO> batchSave(List<SysRegionDO> sysRegionDOList) {
+        return sysRegionDAO.saveAll(sysRegionDOList);
+    }
+
+    @Override
+    public List<SysRegionDO> queryAll() {
+        return sysRegionDAO.findAll();
+    }
+
 }

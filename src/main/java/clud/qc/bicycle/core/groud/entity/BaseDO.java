@@ -9,7 +9,7 @@
  */
 package clud.qc.bicycle.core.groud.entity;
 
-import clud.qc.bicycle.core.groud.usertype.MoneyType;
+import clud.qc.bicycle.core.money.MoneyType;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.hibernate.annotations.TypeDef;
