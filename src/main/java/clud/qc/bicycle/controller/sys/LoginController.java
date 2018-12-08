@@ -4,7 +4,6 @@ import clud.qc.bicycle.common.constant.ConstantConfig;
 import clud.qc.bicycle.controller.BaseController;
 import clud.qc.bicycle.controller.result.UserInfo;
 import clud.qc.bicycle.core.redis.RedisUtils;
-import clud.qc.bicycle.entity.sys.SysRegionDO;
 import clud.qc.bicycle.service.sys.SysRegionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,7 +31,13 @@ public class LoginController extends BaseController {
     @RequestMapping("/index.html")
     public ModelAndView login(ModelMap modelMap, HttpSession session) {
         logger.info("跳转首页");
-        List<SysRegionDO> list = sysRegionService.queryAll();
+        List<UserInfo> list = new ArrayList<>();
+        UserInfo userInfo = new UserInfo();
+        userInfo.setName("张三");
+        userInfo.setSex("男");
+        userInfo.setCreateTime(new Date());
+        session.setAttribute(ConstantConfig.USER_LOGIN_SESSION, userInfo);
+        list.add(userInfo);
         modelMap.put("userList", list);
         modelMap.put("system", "admin:超级管理员");
         return new ModelAndView("index");
