@@ -1,4 +1,4 @@
-package clud.qc.bicycle.core.money;
+package clud.qc.bicycle.core.generator.money;
 
 import org.hibernate.HibernateException;
 import org.hibernate.engine.spi.SharedSessionContractImplementor;

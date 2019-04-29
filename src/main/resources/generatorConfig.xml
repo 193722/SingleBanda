@@ -12,7 +12,7 @@
         <property name="javaFileEncoding" value="UTF-8"/>
 
         <plugin type="clud.qc.bicycle.core.generator.helper.BicycleMapperPlugin">
-            <property name="mappers" value="clud.qc.bicycle.core.groud.mapper.DynamicPageableQueryMapper"/>
+            <property name="mappers" value="clud.qc.bicycle.core.generator.groud.mapper.DynamicPageableQueryMapper"/>
         </plugin>
 
         <!--生成实体对应的数据库连接-->
@@ -25,7 +25,7 @@
         <!--实体,必选-->
         <javaModelGenerator targetPackage="clud.qc.bicycle.entity.{0}"
                             targetProject="src/main/java">
-            <property name="rootClass" value="clud.qc.bicycle.core.groud.entity.BaseDO"/>
+            <property name="rootClass" value="clud.qc.bicycle.core.generator.groud.entity.BaseDO"/>
         </javaModelGenerator>
 
         <!--xml文件,mapper接口 不需要生成时  可以注释掉-->

@@ -1,4 +1,4 @@
-package clud.qc.bicycle.core.money;
+package clud.qc.bicycle.core.generator.money;
 
 import org.apache.commons.lang3.StringUtils;
 

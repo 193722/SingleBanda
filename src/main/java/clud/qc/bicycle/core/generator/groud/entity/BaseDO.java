@@ -7,15 +7,15 @@
  * 修订记录:
  * zisi@yiji.com:2017-05-22 10:57创建
  */
-package clud.qc.bicycle.core.groud.entity;
+package clud.qc.bicycle.core.generator.groud.entity;
 
-import clud.qc.bicycle.core.money.MoneyType;
+import clud.qc.bicycle.core.generator.money.MoneyType;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.hibernate.annotations.TypeDef;
 import org.hibernate.annotations.TypeDefs;
 import org.hibernate.type.YesNoType;
-import clud.qc.bicycle.core.money.Money;
+import clud.qc.bicycle.core.generator.money.Money;
 
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;

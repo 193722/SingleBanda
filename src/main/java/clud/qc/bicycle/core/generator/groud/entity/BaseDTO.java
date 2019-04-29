@@ -7,7 +7,7 @@
  * 修订记录:
  * zisi@yiji.com:2017-05-22 11:16创建
  */
-package clud.qc.bicycle.core.groud.entity;
+package clud.qc.bicycle.core.generator.groud.entity;
 
 
 /**

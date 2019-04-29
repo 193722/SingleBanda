@@ -12,7 +12,7 @@ package clud.qc.bicycle.core.generator.helper;
 import org.mybatis.generator.api.IntrospectedColumn;
 import org.mybatis.generator.api.dom.java.FullyQualifiedJavaType;
 import org.mybatis.generator.internal.types.JavaTypeResolverDefaultImpl;
-import clud.qc.bicycle.core.money.Money;
+import clud.qc.bicycle.core.generator.money.Money;
 
 import java.sql.Types;
 

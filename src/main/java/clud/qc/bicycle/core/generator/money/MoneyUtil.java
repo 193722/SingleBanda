@@ -1,4 +1,4 @@
-package clud.qc.bicycle.core.money;
+package clud.qc.bicycle.core.generator.money;
 
 import com.google.common.math.LongMath;
 import org.springframework.util.Assert;

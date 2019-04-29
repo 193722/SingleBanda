@@ -1,6 +1,6 @@
 package clud.qc.bicycle.entity.sys;
 
-import clud.qc.bicycle.core.groud.entity.BaseDO;
+import clud.qc.bicycle.core.generator.groud.entity.BaseDO;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 

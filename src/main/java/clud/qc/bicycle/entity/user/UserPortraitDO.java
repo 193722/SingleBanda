@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import clud.qc.bicycle.core.groud.entity.BaseDO;
+import clud.qc.bicycle.core.generator.groud.entity.BaseDO;
 
 @Entity
 @Table(name = "user_portrait")
